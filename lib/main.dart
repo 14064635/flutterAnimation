@@ -4,7 +4,10 @@ import 'package:flutter_animation/page/AnimationCountPage.dart';
 import 'package:flutter_animation/page/AnimationDevice.dart';
 import 'package:flutter_animation/page/AnimationFlare.dart';
 import 'package:flutter_animation/page/AnimationPainter.dart';
+import 'package:flutter_animation/page/KeyPage.dart';
+import 'package:flutter_animation/page/boxGame.dart';
 import 'package:flutter_animation/page/hero/AnimationHeroPageA.dart';
+import 'package:flutter_animation/page/myReorderableListView.dart';
 
 void main() {
   runApp(MyApp());
@@ -157,6 +160,42 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   child: Text(
                     'AnimationPainter',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return KeyPage();
+                    }));
+                  },
+                  child: Text(
+                    'Key',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return MyReorderableListView();
+                    }));
+                  },
+                  child: Text(
+                    'reorderableListView',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return BoxGame();
+                    }));
+                  },
+                  child: Text(
+                    'BoxGame',
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
