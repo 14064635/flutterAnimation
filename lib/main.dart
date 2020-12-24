@@ -6,6 +6,10 @@ import 'package:flutter_animation/page/AnimationFlare.dart';
 import 'package:flutter_animation/page/AnimationPainter.dart';
 import 'package:flutter_animation/page/KeyPage.dart';
 import 'package:flutter_animation/page/boxGame.dart';
+import 'package:flutter_animation/page/centerHomePage.dart';
+import 'package:flutter_animation/page/dismissible.dart';
+import 'package:flutter_animation/page/flutterSlidable.dart';
+import 'package:flutter_animation/page/headAnimationPage.dart';
 import 'package:flutter_animation/page/hero/AnimationHeroPageA.dart';
 import 'package:flutter_animation/page/myReorderableListView.dart';
 
@@ -88,119 +92,168 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Container(
-            width: MediaQuery.of(context).size.width,
-            child: Column(
-              children: <Widget>[
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return AnimationHeroPageA();
-                    }));
-                  },
-                  child: Text(
-                    'Hero',
-                    style: TextStyle(fontSize: 20),
-                  ),
+          width: MediaQuery.of(context).size.width,
+          child: Column(
+            children: <Widget>[
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return AnimationHeroPageA();
+                  }));
+                },
+                child: Text(
+                  'Hero',
+                  style: TextStyle(fontSize: 20),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return AnimationCountPage();
-                    }));
-                  },
-                  child: Text(
-                    'AnimationCount',
-                    style: TextStyle(fontSize: 20),
-                  ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return AnimationCountPage();
+                  }));
+                },
+                child: Text(
+                  'AnimationCount',
+                  style: TextStyle(fontSize: 20),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return AnimationControlPage();
-                    }));
-                  },
-                  child: Text(
-                    'AnimationControl',
-                    style: TextStyle(fontSize: 20),
-                  ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return AnimationControlPage();
+                  }));
+                },
+                child: Text(
+                  'AnimationControl',
+                  style: TextStyle(fontSize: 20),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return AnimationDevice();
-                    }));
-                  },
-                  child: Text(
-                    'AnimationChain',
-                    style: TextStyle(fontSize: 20),
-                  ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return AnimationDevice();
+                  }));
+                },
+                child: Text(
+                  'AnimationChain',
+                  style: TextStyle(fontSize: 20),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return AnimationFlare();
-                    }));
-                  },
-                  child: Text(
-                    'AnimationFlare',
-                    style: TextStyle(fontSize: 20),
-                  ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return AnimationFlare();
+                  }));
+                },
+                child: Text(
+                  'AnimationFlare',
+                  style: TextStyle(fontSize: 20),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return AnimationPainter();
-                    }));
-                  },
-                  child: Text(
-                    'AnimationPainter',
-                    style: TextStyle(fontSize: 20),
-                  ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return AnimationPainter();
+                  }));
+                },
+                child: Text(
+                  'AnimationPainter',
+                  style: TextStyle(fontSize: 20),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return KeyPage();
-                    }));
-                  },
-                  child: Text(
-                    'Key',
-                    style: TextStyle(fontSize: 20),
-                  ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return KeyPage();
+                  }));
+                },
+                child: Text(
+                  'Key',
+                  style: TextStyle(fontSize: 20),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return MyReorderableListView();
-                    }));
-                  },
-                  child: Text(
-                    'reorderableListView',
-                    style: TextStyle(fontSize: 20),
-                  ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return MyReorderableListView();
+                  }));
+                },
+                child: Text(
+                  'reorderableListView',
+                  style: TextStyle(fontSize: 20),
                 ),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (BuildContext context) {
-                      return BoxGame();
-                    }));
-                  },
-                  child: Text(
-                    'BoxGame',
-                    style: TextStyle(fontSize: 20),
-                  ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return BoxGame();
+                  }));
+                },
+                child: Text(
+                  'BoxGame',
+                  style: TextStyle(fontSize: 20),
                 ),
-              ],
-            )),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return DismissiblePage();
+                  }));
+                },
+                child: Text(
+                  'Dismissble',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return HeadAnimationPage();
+                  }));
+                },
+                child: Text(
+                  'SliverAppBar',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return CenterHomePage();
+                  }));
+                },
+                child: Text(
+                  'CenterHomePage',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                        return FlutterSlidable();
+                      }));
+                },
+                child: Text(
+                  'flutterSlidableBox',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

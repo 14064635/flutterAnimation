@@ -18,7 +18,7 @@ class _AnimationHeroPageBState extends State<AnimationHeroPageB> {
         child: Hero(
           tag: '123',
           child: Image.network(
-            'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1608203323341&di=ca67b7f7e8d81cc6c7e0814260c6d167&imgtype=0&src=http%3A%2F%2Fa2.att.hudong.com%2F86%2F10%2F01300000184180121920108394217.jpg',
+            'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1694681277,1453280371&fm=26&gp=0.jpg',
             width: 400,
             height: 400,
           ),
