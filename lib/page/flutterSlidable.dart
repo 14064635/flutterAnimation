@@ -8,15 +8,14 @@ class FlutterSlidable extends StatefulWidget {
 }
 
 class _flutterSlidableState extends State<FlutterSlidable> {
-  var aa;
+  var list;
   SlidableController slidableController;
   Animation<double> _rotationAnimation;
   Color _fabColor = Colors.blue;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    aa = List.generate(100, (index) => index);
+    list = List.generate(100, (index) => index);
     slidableController = SlidableController(
       onSlideAnimationChanged: handleSlideAnimationChanged,
       onSlideIsOpenChanged: handleSlideIsOpenChanged,
@@ -43,7 +42,7 @@ class _flutterSlidableState extends State<FlutterSlidable> {
       ),
       body: Container(
         child: ListView.builder(
-            itemCount: aa.length,
+            itemCount: list.length,
             itemBuilder: (context, index) {
               return itemBuild(context, index);
             }),
@@ -52,7 +51,7 @@ class _flutterSlidableState extends State<FlutterSlidable> {
   }
 
   Widget itemBuild(BuildContext context, int index) {
-    var a = aa[index];
+    var a = list[index];
     return Slidable.builder(
       key: Key('$a'),
       actionPane: SlidableScrollActionPane(), //滑出选项的面板 动画
@@ -63,7 +62,7 @@ class _flutterSlidableState extends State<FlutterSlidable> {
         child: SlidableDrawerDismissal(),
         onDismissed: (actionType) {
           setState(() {
-            aa.removeAt(index);
+            list.removeAt(index);
           });
         },
       ),
@@ -97,11 +96,9 @@ class _flutterSlidableState extends State<FlutterSlidable> {
                       );
                     },
                   );
-
                   if (dismiss) {
                     state.dismiss();
                   }
-
 //                  print('123');
 //                  var state = Slidable.of(context);
 //                  state.dismiss();

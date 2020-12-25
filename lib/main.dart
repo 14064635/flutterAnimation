@@ -251,6 +251,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   style: TextStyle(fontSize: 20),
                 ),
               ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                        return FlutterSlidable();
+                      }));
+                },
+                child: Text(
+                  'flutterSlidableBox',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
             ],
           ),
         ),
