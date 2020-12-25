@@ -1,4 +1,4 @@
-#Fri Dec 25 09:52:54 CST 2020
+#Fri Dec 25 17:49:28 CST 2020
 base.0=/Users/krcm110/test/flutterAnimation/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

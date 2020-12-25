@@ -1,4 +1,8 @@
+
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_animation/page/AnimationControlPage.dart';
 import 'package:flutter_animation/page/AnimationCountPage.dart';
 import 'package:flutter_animation/page/AnimationDevice.dart';
@@ -12,9 +16,20 @@ import 'package:flutter_animation/page/flutterSlidable.dart';
 import 'package:flutter_animation/page/headAnimationPage.dart';
 import 'package:flutter_animation/page/hero/AnimationHeroPageA.dart';
 import 'package:flutter_animation/page/myReorderableListView.dart';
+import 'package:flutter_animation/page/tweenAnimationBar.dart';
 
 void main() {
   runApp(MyApp());
+  if(Platform.isAndroid){
+    SystemUiOverlayStyle style = SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        ///这是设置状态栏的图标和字体的颜色
+        ///Brightness.light  一般都是显示为白色
+        ///Brightness.dark 一般都是显示为黑色
+        statusBarIconBrightness: Brightness.light
+    );
+    SystemChrome.setSystemUIOverlayStyle(style);
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -255,11 +270,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (BuildContext context) {
-                        return FlutterSlidable();
+                        return TwennAnimationBar();
                       }));
                 },
                 child: Text(
-                  'flutterSlidableBox',
+                  'TwennAnimationBar',
                   style: TextStyle(fontSize: 20),
                 ),
               ),
