@@ -1,4 +1,3 @@
-
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -13,21 +12,23 @@ import 'package:flutter_animation/page/boxGame.dart';
 import 'package:flutter_animation/page/centerHomePage.dart';
 import 'package:flutter_animation/page/dismissible.dart';
 import 'package:flutter_animation/page/flutterSlidable.dart';
+import 'package:flutter_animation/page/game.dart';
 import 'package:flutter_animation/page/headAnimationPage.dart';
 import 'package:flutter_animation/page/hero/AnimationHeroPageA.dart';
+import 'package:flutter_animation/page/keyBordGame.dart';
 import 'package:flutter_animation/page/myReorderableListView.dart';
 import 'package:flutter_animation/page/tweenAnimationBar.dart';
 
 void main() {
   runApp(MyApp());
-  if(Platform.isAndroid){
+  if (Platform.isAndroid) {
     SystemUiOverlayStyle style = SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
+
         ///这是设置状态栏的图标和字体的颜色
         ///Brightness.light  一般都是显示为白色
         ///Brightness.dark 一般都是显示为黑色
-        statusBarIconBrightness: Brightness.light
-    );
+        statusBarIconBrightness: Brightness.light);
     SystemChrome.setSystemUIOverlayStyle(style);
   }
 }
@@ -124,10 +125,14 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return AnimationCountPage();
-                  }));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return AnimationCountPage();
+                      },
+                    ),
+                  );
                 },
                 child: Text(
                   'AnimationCount',
@@ -258,8 +263,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (BuildContext context) {
-                        return FlutterSlidable();
-                      }));
+                    return FlutterSlidable();
+                  }));
                 },
                 child: Text(
                   'flutterSlidableBox',
@@ -270,11 +275,39 @@ class _MyHomePageState extends State<MyHomePage> {
                 onTap: () {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (BuildContext context) {
-                        return TwennAnimationBar();
-                      }));
+                    return TwennAnimationBar();
+                  }));
                 },
                 child: Text(
                   'TwennAnimationBar',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (BuildContext context) {
+                    return KeyBordGame();
+                  }));
+                },
+                child: Text(
+                  'Ipad',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return Game();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  'keyBordGame',
                   style: TextStyle(fontSize: 20),
                 ),
               ),

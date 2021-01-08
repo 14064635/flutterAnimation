@@ -1,0 +1,4 @@
+#Tue Jan 05 17:55:53 CST 2021
+base.0=/Users/krcm110/test/flutterAnimation/build/app/intermediates/dex/release/mergeDexRelease/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
