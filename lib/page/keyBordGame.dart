@@ -18,34 +18,21 @@ class _KeyBordGameState extends State<KeyBordGame> {
 
   @override
   Widget build(BuildContext context) {
-    var orientation = MediaQuery.of(context).orientation == Orientation.portrait
-        ? Axis.vertical
-        : Axis.horizontal;
-    return Container(
-      alignment: Alignment.center,
-      child: ListView.builder(
-        itemCount: 14,
-        scrollDirection: orientation,
-        itemBuilder: (BuildContext context, int index) {
-          return Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+    return SingleChildScrollView(
+      child: OrientationBuilder(
+        builder: (BuildContext context, Orientation orientation) {
+          return Flex(
+            direction: orientation == Orientation.landscape
+                ? Axis.horizontal
+                : Axis.vertical,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
-              Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: Colors.deepOrangeAccent,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(15),
-                  ),
+              for (var i = 0; i < 115; i++)
+                Box(
+                  myColor: Colors.red,
+                  key: ValueKey(i),
                 ),
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-                height: 100,
-                width: 100,
-                child: Text(
-                  '$index',
-                ),
-                key: Key('$index'),
-              ),
             ],
           );
         },
@@ -68,17 +55,20 @@ class _BoxState extends State<Box> {
   int count = 0;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        setState(() {
-          count++;
-        });
-      },
-      child: Container(
-          child: Center(child: Text('$count')),
-          width: 40,
-          height: 40,
-          color: widget.myColor),
+    return Container(
+      margin: EdgeInsets.all(45),
+      color: Colors.amber,
+      child: GestureDetector(
+        onTap: () {
+          setState(() {
+            count++;
+          });
+        },
+        child: Container(
+            width: 40,
+            color: Colors.brown,
+            child: Center(child: Text('$count'))),
+      ),
     );
   }
 }

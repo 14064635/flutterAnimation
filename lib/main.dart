@@ -8,6 +8,7 @@ import 'package:flutter_animation/page/AnimationDevice.dart';
 import 'package:flutter_animation/page/AnimationFlare.dart';
 import 'package:flutter_animation/page/AnimationPainter.dart';
 import 'package:flutter_animation/page/KeyPage.dart';
+import 'package:flutter_animation/page/animationTransparent.dart';
 import 'package:flutter_animation/page/boxGame.dart';
 import 'package:flutter_animation/page/centerHomePage.dart';
 import 'package:flutter_animation/page/dismissible.dart';
@@ -308,6 +309,22 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Text(
                   'keyBordGame',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return AnimationTransparent();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  'AnimatedOpacity',
                   style: TextStyle(fontSize: 20),
                 ),
               ),
