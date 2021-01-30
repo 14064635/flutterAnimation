@@ -15,7 +15,7 @@ class _AnimationTransparentState extends State<AnimationTransparent> {
   ];
   var _showImageUrl =
       'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3363295869,2467511306&fm=26&gp=0.jpg';
-  int _showImageIndex() {
+  int _getImageIndex() {
     _index++;
     if (_index >= _list.length) {
       _index = 0;
@@ -23,8 +23,8 @@ class _AnimationTransparentState extends State<AnimationTransparent> {
     return _index;
   }
 
-  void _setImageUrl() {
-    _showImageUrl = _list[_showImageIndex()];
+  void _getImageUrl() {
+    _showImageUrl = _list[_getImageIndex()];
   }
 
   @override
@@ -40,7 +40,7 @@ class _AnimationTransparentState extends State<AnimationTransparent> {
             });
             _completeCount++;
             if (_completeCount % 2 != 0) {
-              _setImageUrl();
+              _getImageUrl();
             }
           },
           child: GestureDetector(

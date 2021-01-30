@@ -9,7 +9,7 @@ class AnimationDevice extends StatefulWidget {
 class _AnimationDeviceState extends State<AnimationDevice>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
-  var _animation;
+  // var _animation;
   @override
   void initState() {
     _controller =
@@ -36,7 +36,7 @@ class _AnimationDeviceState extends State<AnimationDevice>
       }
     });
 
-    _animation = Tween(begin: 0.0, end: 1.0);
+    // _animation = Tween(begin: 0.0, end: 1.0);
     _controller.repeat(reverse: true);
     super.initState();
   }
@@ -67,7 +67,7 @@ class _AnimationDeviceState extends State<AnimationDevice>
                   child: Container(
                     width: animationTween.value,
                     height: 100 * _controller.value,
-                    color: Colors.transparent,
+                    // color: Colors.transparent,
                   ),
                 );
               },

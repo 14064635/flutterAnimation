@@ -2,16 +2,18 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_animation/page/AnimationCard.dart';
 import 'package:flutter_animation/page/AnimationControlPage.dart';
 import 'package:flutter_animation/page/AnimationCountPage.dart';
 import 'package:flutter_animation/page/AnimationDevice.dart';
 import 'package:flutter_animation/page/AnimationFlare.dart';
 import 'package:flutter_animation/page/AnimationPainter.dart';
 import 'package:flutter_animation/page/KeyPage.dart';
-import 'package:flutter_animation/page/animationTransparent.dart';
+import 'package:flutter_animation/page/animatedCrossFadePage.dart';
 import 'package:flutter_animation/page/boxGame.dart';
 import 'package:flutter_animation/page/centerHomePage.dart';
 import 'package:flutter_animation/page/dismissible.dart';
+import 'package:flutter_animation/page/flipCardComponent.dart';
 import 'package:flutter_animation/page/flutterSlidable.dart';
 import 'package:flutter_animation/page/game.dart';
 import 'package:flutter_animation/page/headAnimationPage.dart';
@@ -318,15 +320,71 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (BuildContext context) {
-                        return AnimationTransparent();
+                        return AnimatedCrossFadePage();
                       },
                     ),
                   );
                 },
                 child: Text(
-                  'AnimatedOpacity',
+                  'animatedCrossFadePage',
                   style: TextStyle(fontSize: 20),
                 ),
+              ),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return AnimationCard();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'FlipCardComponent',
+                    style: TextStyle(fontSize: 20),
+                  )),
+
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return FlipCardComponent();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'animationCard',
+                    style: TextStyle(fontSize: 20),
+                  )),
+
+              FlatButton(
+                onPressed: () {},
+                child: Container(
+                  width: 70,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Icon(Icons.star, color: Colors.blue),
+                      Text(
+                        "收藏",
+                        style: TextStyle(color: Colors.blue),
+                      ),
+                    ],
+                  ),
+                ),
+                color: Colors.white,
+                textColor: Colors.black,
+                shape: RoundedRectangleBorder(
+                    side: BorderSide(
+                      color: Colors.blue,
+                      width: 3,
+                    ),
+                    borderRadius: BorderRadius.circular(50)),
               ),
             ],
           ),
