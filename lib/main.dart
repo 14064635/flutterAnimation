@@ -8,10 +8,13 @@ import 'package:flutter_animation/page/AnimationCountPage.dart';
 import 'package:flutter_animation/page/AnimationDevice.dart';
 import 'package:flutter_animation/page/AnimationFlare.dart';
 import 'package:flutter_animation/page/AnimationPainter.dart';
+import 'package:flutter_animation/page/BelevelAnglePage.dart';
 import 'package:flutter_animation/page/KeyPage.dart';
 import 'package:flutter_animation/page/animatedCrossFadePage.dart';
+import 'package:flutter_animation/page/BannerPage.dart';
 import 'package:flutter_animation/page/boxGame.dart';
 import 'package:flutter_animation/page/centerHomePage.dart';
+import 'package:flutter_animation/page/diagonalWidget.dart';
 import 'package:flutter_animation/page/dismissible.dart';
 import 'package:flutter_animation/page/flipCardComponent.dart';
 import 'package:flutter_animation/page/flutterSlidable.dart';
@@ -345,7 +348,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     'FlipCardComponent',
                     style: TextStyle(fontSize: 20),
                   )),
-
               GestureDetector(
                   onTap: () {
                     Navigator.push(
@@ -361,7 +363,21 @@ class _MyHomePageState extends State<MyHomePage> {
                     'animationCard',
                     style: TextStyle(fontSize: 20),
                   )),
-
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return BannerPage();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'bannerPage',
+                    style: TextStyle(fontSize: 20),
+                  )),
               FlatButton(
                 onPressed: () {},
                 child: Container(
@@ -386,6 +402,45 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     borderRadius: BorderRadius.circular(50)),
               ),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return BelevelAnglePage();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'bannerPage',
+                    style: TextStyle(fontSize: 20),
+                  )),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return DiagonalWidget([
+                            Text("123"),
+                            Text('2345'),
+                            Image.network(
+                              'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.51miz.com%2Fpreview%2Felement%2F00%2F01%2F12%2F81%2FE-1128163-9A208FD8.jpg&refer=http%3A%2F%2Fimg.51miz.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1616224376&t=4727d929caf37a4d8a5e94fa08d71b8f',
+                              width: 100,
+                              height: 100,
+                            ),
+                            Text('888')
+                          ]);
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'bannerPage',
+                    style: TextStyle(fontSize: 20),
+                  )),
             ],
           ),
         ),
