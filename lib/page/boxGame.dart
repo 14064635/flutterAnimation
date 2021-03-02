@@ -79,6 +79,7 @@ class _KegGameState extends State<BoxGame> {
   }
 }
 
+
 class RedBox extends StatelessWidget {
   static const double width = 50.0;
   static const double height = 50.0;

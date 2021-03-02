@@ -9,9 +9,9 @@ import 'package:flutter_animation/page/AnimationDevice.dart';
 import 'package:flutter_animation/page/AnimationFlare.dart';
 import 'package:flutter_animation/page/AnimationPainter.dart';
 import 'package:flutter_animation/page/BelevelAnglePage.dart';
+import 'package:flutter_animation/page/BevelAngle.dart';
 import 'package:flutter_animation/page/KeyPage.dart';
 import 'package:flutter_animation/page/animatedCrossFadePage.dart';
-import 'package:flutter_animation/page/BannerPage.dart';
 import 'package:flutter_animation/page/boxGame.dart';
 import 'package:flutter_animation/page/centerHomePage.dart';
 import 'package:flutter_animation/page/diagonalWidget.dart';
@@ -364,20 +364,21 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(fontSize: 20),
                   )),
               GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) {
-                          return BannerPage();
-                        },
-                      ),
-                    );
-                  },
-                  child: Text(
-                    'bannerPage',
-                    style: TextStyle(fontSize: 20),
-                  )),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return BevelAngleTest();
+                      },
+                    ),
+                  );
+                },
+                child: Text(
+                  'bevelAngle1',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
               FlatButton(
                 onPressed: () {},
                 child: Container(
@@ -414,7 +415,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                   child: Text(
-                    'bannerPage',
+                    'bevelColumn1',
                     style: TextStyle(fontSize: 20),
                   )),
               GestureDetector(
@@ -438,7 +439,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                   child: Text(
-                    'bannerPage',
+                    'bevelColumn',
                     style: TextStyle(fontSize: 20),
                   )),
             ],
