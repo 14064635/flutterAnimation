@@ -278,8 +278,8 @@ class _PuzzleState extends State<Puzzle> with SingleTickerProviderStateMixin {
   }
 
   void resetNum() {
-    a = Random().nextInt(100);
-    b = Random().nextInt(100);
+    a = Random().nextInt(5);
+    b = Random().nextInt(5);
     color = Colors.primaries[Random().nextInt(Colors.primaries.length)][100];
   }
 

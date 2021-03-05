@@ -14,11 +14,14 @@ import 'package:flutter_animation/page/KeyPage.dart';
 import 'package:flutter_animation/page/animatedCrossFadePage.dart';
 import 'package:flutter_animation/page/boxGame.dart';
 import 'package:flutter_animation/page/centerHomePage.dart';
+import 'package:flutter_animation/page/changeSizeButton.dart';
+import 'package:flutter_animation/page/customMultiChildLayout.dart';
 import 'package:flutter_animation/page/diagonalWidget.dart';
 import 'package:flutter_animation/page/dismissible.dart';
 import 'package:flutter_animation/page/flipCardComponent.dart';
 import 'package:flutter_animation/page/flutterSlidable.dart';
 import 'package:flutter_animation/page/game.dart';
+import 'package:flutter_animation/page/globalKeyTest.dart';
 import 'package:flutter_animation/page/headAnimationPage.dart';
 import 'package:flutter_animation/page/hero/AnimationHeroPageA.dart';
 import 'package:flutter_animation/page/keyBordGame.dart';
@@ -112,298 +115,299 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          child: Column(
-            children: <Widget>[
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return AnimationHeroPageA();
-                  }));
-                },
-                child: Text(
-                  'Hero',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (BuildContext context) {
-                        return AnimationCountPage();
-                      },
-                    ),
-                  );
-                },
-                child: Text(
-                  'AnimationCount',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return AnimationControlPage();
-                  }));
-                },
-                child: Text(
-                  'AnimationControl',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return AnimationDevice();
-                  }));
-                },
-                child: Text(
-                  'AnimationChain',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return AnimationFlare();
-                  }));
-                },
-                child: Text(
-                  'AnimationFlare',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return AnimationPainter();
-                  }));
-                },
-                child: Text(
-                  'AnimationPainter',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return KeyPage();
-                  }));
-                },
-                child: Text(
-                  'Key',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return MyReorderableListView();
-                  }));
-                },
-                child: Text(
-                  'reorderableListView',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return BoxGame();
-                  }));
-                },
-                child: Text(
-                  'BoxGame',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return DismissiblePage();
-                  }));
-                },
-                child: Text(
-                  'Dismissble',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return HeadAnimationPage();
-                  }));
-                },
-                child: Text(
-                  'SliverAppBar',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return CenterHomePage();
-                  }));
-                },
-                child: Text(
-                  'CenterHomePage',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return FlutterSlidable();
-                  }));
-                },
-                child: Text(
-                  'flutterSlidableBox',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return TwennAnimationBar();
-                  }));
-                },
-                child: Text(
-                  'TwennAnimationBar',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (BuildContext context) {
-                    return KeyBordGame();
-                  }));
-                },
-                child: Text(
-                  'Ipad',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (BuildContext context) {
-                        return Game();
-                      },
-                    ),
-                  );
-                },
-                child: Text(
-                  'keyBordGame',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (BuildContext context) {
-                        return AnimatedCrossFadePage();
-                      },
-                    ),
-                  );
-                },
-                child: Text(
-                  'animatedCrossFadePage',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              GestureDetector(
+      body: SingleChildScrollView(
+        child: Center(
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              children: <Widget>[
+                GestureDetector(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) {
-                          return AnimationCard();
-                        },
-                      ),
-                    );
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return AnimationHeroPageA();
+                    }));
                   },
                   child: Text(
-                    'FlipCardComponent',
+                    'Hero',
                     style: TextStyle(fontSize: 20),
-                  )),
-              GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (BuildContext context) {
-                          return FlipCardComponent();
-                        },
-                      ),
-                    );
-                  },
-                  child: Text(
-                    'animationCard',
-                    style: TextStyle(fontSize: 20),
-                  )),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (BuildContext context) {
-                        return BevelAngleTest();
-                      },
-                    ),
-                  );
-                },
-                child: Text(
-                  'bevelAngle1',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-              FlatButton(
-                onPressed: () {},
-                child: Container(
-                  width: 70,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Icon(Icons.star, color: Colors.blue),
-                      Text(
-                        "收藏",
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ],
                   ),
                 ),
-                color: Colors.white,
-                textColor: Colors.black,
-                shape: RoundedRectangleBorder(
-                    side: BorderSide(
-                      color: Colors.blue,
-                      width: 3,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return AnimationCountPage();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'AnimationCount',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return AnimationControlPage();
+                    }));
+                  },
+                  child: Text(
+                    'AnimationControl',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return AnimationDevice();
+                    }));
+                  },
+                  child: Text(
+                    'AnimationChain',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return AnimationFlare();
+                    }));
+                  },
+                  child: Text(
+                    'AnimationFlare',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return AnimationPainter();
+                    }));
+                  },
+                  child: Text(
+                    'AnimationPainter',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return KeyPage();
+                    }));
+                  },
+                  child: Text(
+                    'Key',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return MyReorderableListView();
+                    }));
+                  },
+                  child: Text(
+                    'reorderableListView',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return BoxGame();
+                    }));
+                  },
+                  child: Text(
+                    'BoxGame',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return DismissiblePage();
+                    }));
+                  },
+                  child: Text(
+                    'Dismissble',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return HeadAnimationPage();
+                    }));
+                  },
+                  child: Text(
+                    'SliverAppBar',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return CenterHomePage();
+                    }));
+                  },
+                  child: Text(
+                    'CenterHomePage',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return FlutterSlidable();
+                    }));
+                  },
+                  child: Text(
+                    'flutterSlidableBox',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return TwennAnimationBar();
+                    }));
+                  },
+                  child: Text(
+                    'TwennAnimationBar',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return KeyBordGame();
+                    }));
+                  },
+                  child: Text(
+                    'Ipad',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return Game();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'keyBordGame',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return AnimatedCrossFadePage();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'animatedCrossFadePage',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) {
+                            return AnimationCard();
+                          },
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'FlipCardComponent',
+                      style: TextStyle(fontSize: 20),
+                    )),
+                GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) {
+                            return FlipCardComponent();
+                          },
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'animationCard',
+                      style: TextStyle(fontSize: 20),
+                    )),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return BevelAngleTest();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'bevelAngle',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                FlatButton(
+                  onPressed: () {},
+                  child: Container(
+                    width: 70,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Icon(Icons.star, color: Colors.blue),
+                        Text(
+                          "收藏",
+                          style: TextStyle(color: Colors.blue),
+                        ),
+                      ],
                     ),
-                    borderRadius: BorderRadius.circular(50)),
-              ),
-              GestureDetector(
+                  ),
+                  color: Colors.white,
+                  textColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        color: Colors.blue,
+                        width: 3,
+                      ),
+                      borderRadius: BorderRadius.circular(50)),
+                ),
+                GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
@@ -417,8 +421,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(
                     'bevelColumn1',
                     style: TextStyle(fontSize: 20),
-                  )),
-              GestureDetector(
+                  ),
+                ),
+                GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
@@ -441,8 +446,58 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Text(
                     'bevelColumn',
                     style: TextStyle(fontSize: 20),
-                  )),
-            ],
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return ChangeSizeButton();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'ChangeButton',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return CustomMultichildLayoutTest();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'CustomMultichildLayoutTest',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return GlobalKeyTest();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'GlobalKeyTest',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

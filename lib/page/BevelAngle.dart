@@ -26,12 +26,12 @@ class _BevelAngleTestState extends State<BevelAngleTest> {
       timer = t;
       setState(() {
         if (!ver) {
-          str += 'a';
+          str += '福';
         } else {
           str = str.substring(0, str.length - 1);
         }
 
-        if (str.length > 50) {
+        if (str.length > 30) {
           ver = true;
         }
         if (str.length == 1) {
@@ -51,7 +51,7 @@ class _BevelAngleTestState extends State<BevelAngleTest> {
   @override
   Widget build(BuildContext context) {
     double h = 44, w = 500;
-    final textSpan = TextSpan(text: '$str', style: TextStyle(fontSize: 15));
+    final textSpan = TextSpan(text: '$str', style: TextStyle(fontSize: 15,color: Colors.red));
     final tp = TextPainter(text: textSpan, textDirection: TextDirection.ltr)
       ..layout();
     h = tp.height;
@@ -69,7 +69,7 @@ class _BevelAngleTestState extends State<BevelAngleTest> {
               Container(
                 width: 220,
                 height: 220,
-                color: Colors.green,
+                color: Colors.deepOrange,
               ),
               Positioned(
                 left: 0,
@@ -80,7 +80,7 @@ class _BevelAngleTestState extends State<BevelAngleTest> {
                   angle: -1 * pi / 4,
                   // angle: pi*2 *1.333,
                   child: Container(
-                    color: Colors.red.withOpacity(0.5),
+                    color: Colors.yellow.withOpacity(0.5),
                     width: w,
                     height: h,
                     child: Center(child: Text.rich(textSpan)),
@@ -95,7 +95,7 @@ class _BevelAngleTestState extends State<BevelAngleTest> {
                   alignment: Alignment.bottomRight,
                   angle: pi / st,
                   child: Container(
-                    color: Colors.red.withOpacity(0.8),
+                    color: Colors.yellow.withOpacity(0.8),
                     width: w,
                     height: h,
                     child: Center(child: Text.rich(textSpan)),
@@ -112,7 +112,7 @@ class _BevelAngleTestState extends State<BevelAngleTest> {
                   alignment: Alignment.topRight,
                   angle: -1 * pi / st,
                   child: Container(
-                    color: Colors.red.withOpacity(0.8),
+                    color: Colors.yellow.withOpacity(0.8),
                     width: w,
                     height: h,
                     child: Center(child: Text.rich(textSpan)),
@@ -128,7 +128,7 @@ class _BevelAngleTestState extends State<BevelAngleTest> {
                   alignment: Alignment.topLeft,
                   angle: pi / st,
                   child: Container(
-                    color: Colors.red.withOpacity(0.8),
+                    color: Colors.yellow.withOpacity(0.8),
                     width: w,
                     height: h,
                     child: Center(child: Text.rich(textSpan)),

@@ -25,7 +25,8 @@ class _BevelAbgleState extends State<BevelAbgle> {
         ),
       );
     }
-    Future(() {
+
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       updateWeight();
       setState(() {
         show = true;
