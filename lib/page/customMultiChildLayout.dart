@@ -13,63 +13,88 @@ class _CustomMultichildLayoutTestState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('CustomMultichildLayout'),
-        ),
-        body: Stack(
-          children: <Widget>[
-            CustomMultiChildLayout(
-              delegate: myDelegate(),
+      appBar: AppBar(
+        title: Text('CustomMultichildLayout'),
+      ),
+      body: Stack(
+        children: <Widget>[
+          CustomMultiChildLayout(
+            delegate: myDelegate(),
+            children: <Widget>[
+              LayoutId(
+                id: 3,
+                child: Container(
+                    width: 1000,
+                    height: 1400,
+                    color: Colors.deepPurple,
+                    child: FlutterLogo()),
+              ),
+              LayoutId(
+                id: 2,
+                child: Container(color: Colors.yellow, child: FlutterLogo()),
+              ),
+              LayoutId(
+                id: 1,
+                child: Container(color: Colors.red, child: FlutterLogo()),
+              ),
+            ],
+          ),
+          Container(
+            child: CustomMultiChildLayout(
+              delegate: textDelegate(),
               children: <Widget>[
                 LayoutId(
-                  id: 3,
-                  child: Container(
-                      width: 1000,
-                      height: 1400,
-                      color: Colors.deepPurple,
-                      child: FlutterLogo()),
+                  id: 'underLine',
+                  child: Transform.scale(
+                    alignment: Alignment.topLeft,
+                    scale: 1.1,
+                    child: Text(
+                      '空',
+                      style: TextStyle(
+                          fontSize: 130,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.blue),
+                    ),
+                  ),
                 ),
                 LayoutId(
-                  id: 2,
-                  child: Container(color: Colors.yellow, child: FlutterLogo()),
+                  id: 'text',
+                  child: Transform.scale(
+                    alignment: Alignment.topLeft,
+                    scale: 0.99999,
+                    child: Text(
+                      '空',
+                      style: TextStyle(
+                          fontSize: 130,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.white),
+                    ),
+                  ),
                 ),
-                LayoutId(
-                  id: 1,
-                  child: Container(color: Colors.red, child: FlutterLogo()),
-                ),
+
+                // LayoutId(
+                //   id: 'underLine',
+                //   child: Container(
+                //     color: Colors.green,
+                //   ),
+                // ),
               ],
             ),
-            Container(
-              color: Colors.white,
-              child: CustomMultiChildLayout(
-                delegate: textDelegate(),
-                children: <Widget>[
-                  LayoutId(
-                    id: 'text',
-                    child: Text('大家好dddsdsdsdsdsds'),
-                  ),
-                  LayoutId(
-                    id: 'underLine',
-                    child: Container(
-                      color: Colors.green,
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }
 
 // 文本的约束
 class textDelegate extends MultiChildLayoutDelegate {
   Size size1, size2;
-
-  @override
-  Size getSize(BoxConstraints constraints) {
-    return Size(200, 20);
-  }
+  //
+  // @override
+  // Size getSize(BoxConstraints constraints) {
+  //   return Size(200, 20);
+  // }
 
   @override
   void performLayout(Size size) {
@@ -79,9 +104,9 @@ class textDelegate extends MultiChildLayoutDelegate {
     }
 
     if (hasChild('underLine')) {
-      size2 = layoutChild(
-          'underLine', BoxConstraints(maxWidth: size1.width, maxHeight: 2));
-      positionChild('underLine', Offset(0, size1.height));
+      size2 = layoutChild('underLine',
+          BoxConstraints(maxWidth: size1.width, maxHeight: size1.height));
+      positionChild('underLine', Offset(-1, -1));
     }
   }
 

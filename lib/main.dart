@@ -9,7 +9,8 @@ import 'package:flutter_animation/page/AnimationDevice.dart';
 import 'package:flutter_animation/page/AnimationFlare.dart';
 import 'package:flutter_animation/page/AnimationPainter.dart';
 import 'package:flutter_animation/page/BelevelAnglePage.dart';
-import 'package:flutter_animation/page/BevelAngle.dart';
+import 'package:flutter_animation/page/ShaderMaskTest.dart';
+import 'package:flutter_animation/page/bevelAngle.dart';
 import 'package:flutter_animation/page/KeyPage.dart';
 import 'package:flutter_animation/page/animatedCrossFadePage.dart';
 import 'package:flutter_animation/page/boxGame.dart';
@@ -492,10 +493,26 @@ class _MyHomePageState extends State<MyHomePage> {
                     );
                   },
                   child: Text(
-                    'GlobalKeyTest',
+                    'flutter eventLoop',
                     style: TextStyle(fontSize: 20),
                   ),
-                )
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return ShaderMaskTest();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'ShaderMask',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
               ],
             ),
           ),
