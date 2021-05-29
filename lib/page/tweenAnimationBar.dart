@@ -1,5 +1,4 @@
-import 'package:extended_nested_scroll_view/extended_nested_scroll_view.dart'
-    as d;
+// import 'package:extended_nested_scroll_view/extended_nested_scroll_view.dart' as d;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -148,27 +147,27 @@ class _twennAnimationBarState extends State<TwennAnimationBar>
             },
             child: ScrollConfiguration(
               behavior: ScrollBehavior(),
-              child: d.NestedScrollView(
-                controller: _scrollController,
-                headerSliverBuilder: sliverWidget,
-                pinnedHeaderSliverHeightBuilder: () =>
-                    MediaQuery.of(context).padding.top + 100.0,
-                body: Container(
-                  padding: EdgeInsets.only(top: 10.0),
-                  child: TabBarView(
-                      key: ValueKey('11'),
-                      controller: _tableControl,
-                      children: [
-                        SlidablePageOne(
-                          controller: _scrollController,
-                          keyValue: '1',
-                        ),
-                        SlidablePageTwo(
-                          keyValue: '2',
-                        ),
-                      ]),
-                ),
-              ),
+              // child: d.NestedScrollView(
+              //   controller: _scrollController,
+              //   headerSliverBuilder: sliverWidget,
+              //   pinnedHeaderSliverHeightBuilder: () =>
+              //       MediaQuery.of(context).padding.top + 100.0,
+              //   body: Container(
+              //     padding: EdgeInsets.only(top: 10.0),
+              //     child: TabBarView(
+              //         key: ValueKey('11'),
+              //         controller: _tableControl,
+              //         children: [
+              //           SlidablePageOne(
+              //             controller: _scrollController,
+              //             keyValue: '1',
+              //           ),
+              //           SlidablePageTwo(
+              //             keyValue: '2',
+              //           ),
+              //         ]),
+              //   ),
+              // ),
             ),
           ),
         ),
@@ -194,7 +193,7 @@ class _twennAnimationBarState extends State<TwennAnimationBar>
 //    );
 //    final _homeStore = Provider.of<HomeStore>(context);
 //    _homeStore.refreshReset();
-////        发请求
+// //        发请求
 //    _homeStore.dataRequestApi(_tabController.index);
 //    _homeStore.listenerKey = <int>[_tabController.index];
 //    return _homeStore.refreshCompleter.future.then((_) {});

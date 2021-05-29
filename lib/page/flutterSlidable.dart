@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
+
+
 class FlutterSlidable extends StatefulWidget {
   @override
   _flutterSlidableState createState() => _flutterSlidableState();
@@ -9,17 +11,17 @@ class FlutterSlidable extends StatefulWidget {
 
 class _flutterSlidableState extends State<FlutterSlidable> {
   var list;
-  SlidableController slidableController;
+   SlidableController slidableController;
   Animation<double> _rotationAnimation;
   Color _fabColor = Colors.blue;
   @override
   void initState() {
     super.initState();
     list = List.generate(100, (index) => index);
-    slidableController = SlidableController(
-      onSlideAnimationChanged: handleSlideAnimationChanged,
+     slidableController = SlidableController(
+       onSlideAnimationChanged: handleSlideAnimationChanged,
       onSlideIsOpenChanged: handleSlideIsOpenChanged,
-    );
+     );
   }
 
   void handleSlideAnimationChanged(Animation<double> slideAnimation) {
