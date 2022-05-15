@@ -19,6 +19,7 @@ import 'package:flutter_animation/page/changeSizeButton.dart';
 import 'package:flutter_animation/page/customMultiChildLayout.dart';
 import 'package:flutter_animation/page/diagonalWidget.dart';
 import 'package:flutter_animation/page/dismissible.dart';
+import 'package:flutter_animation/page/effict3D.dart';
 import 'package:flutter_animation/page/flipCardComponent.dart';
 import 'package:flutter_animation/page/flutterSlidable.dart';
 import 'package:flutter_animation/page/game.dart';
@@ -510,6 +511,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   child: Text(
                     'ShaderMask',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return Effict3D();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    '3D_Box',
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
