@@ -15,4 +15,10 @@ class _AnimationPainterState extends State<AnimationPainter> {
       body: BackGroundStart(),
     );
   }
+
+  @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
+  }
 }

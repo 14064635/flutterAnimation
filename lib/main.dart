@@ -28,6 +28,7 @@ import 'package:flutter_animation/page/headAnimationPage.dart';
 import 'package:flutter_animation/page/hero/AnimationHeroPageA.dart';
 import 'package:flutter_animation/page/keyBordGame.dart';
 import 'package:flutter_animation/page/myReorderableListView.dart';
+import 'package:flutter_animation/page/providerTest/ProviderRoute.dart';
 import 'package:flutter_animation/page/tweenAnimationBar.dart';
 
 void main() {
@@ -527,6 +528,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   child: Text(
                     '3D_Box',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) {
+                          return ProviderRoute();
+                        },
+                      ),
+                    );
+                  },
+                  child: Text(
+                    'ProviderTest',
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
